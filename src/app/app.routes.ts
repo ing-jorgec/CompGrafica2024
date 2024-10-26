@@ -36,6 +36,10 @@ path: 'otherform',
 component: OtherFormComponent
 },
 {
+path: 'register',
+component: RegisterComponent
+},
+{
 path: '', redirectTo: 'home', pathMatch: 'full'
 }
 
