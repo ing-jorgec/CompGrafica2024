@@ -4,12 +4,13 @@ import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { CheckboxModule } from 'primeng/checkbox';
 import {RadioButtonModule} from 'primeng/radiobutton'
+import { InputTextareaModule } from 'primeng/inputtextarea';
 
 
 @Component({
   selector: 'app-other-form-cb',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, CheckboxModule, ButtonModule,RadioButtonModule],
+  imports: [CommonModule, ReactiveFormsModule, CheckboxModule, ButtonModule,RadioButtonModule, InputTextareaModule],
   templateUrl: './other-form-cb.component.html',
   styleUrl: './other-form-cb.component.css'
 })
@@ -31,6 +32,7 @@ export class OtherFormCbComponent {
 
   checkboxForm: FormGroup;
   radiobuttonForm: FormGroup;
+
 
   constructor(private fb: FormBuilder) {
     this.checkboxForm = this.fb.group({
