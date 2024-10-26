@@ -5,6 +5,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginTestComponent } from './components/login-test/login-test.component';
 import { OtherFormComponent } from './components/other-form/other-form.component';
+import { OtherFormCbComponent } from './components/other-form-cb/other-form-cb.component';
 
 export const routes: Routes = [
 {
@@ -38,6 +39,10 @@ component: OtherFormComponent
 {
 path: 'register',
 component: RegisterComponent
+},
+{
+path: 'othercb',
+component: OtherFormCbComponent
 },
 {
 path: '', redirectTo: 'home', pathMatch: 'full'
