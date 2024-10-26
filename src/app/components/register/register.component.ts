@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { CalendarModule } from 'primeng/calendar';
 import { DropdownModule } from 'primeng/dropdown';
@@ -24,7 +25,7 @@ export class RegisterComponent {
 
   ];
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private router: Router) {
     this.registroForm = this.fb.group({
       nombre: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -35,6 +36,7 @@ export class RegisterComponent {
     onSubmit() {
       if (this.registroForm.valid) {
         console.log('Formulario Enviado', this.registroForm.value);
+        this.router.navigate(['/logintest']);
       } else {
         this.registroForm.markAllAsTouched();
       }
