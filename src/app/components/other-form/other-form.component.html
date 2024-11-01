@@ -1,4 +1,5 @@
-<div class="p-fluid">
+
+  <div class="p-fluid">
     <form [formGroup]="otherForm" (ngSubmit)="onSubmit()">
       <div class="p-field">
         <label for="name">Nombre</label>
@@ -26,5 +27,5 @@
   
       <button pButton type="submit" label="Enviar"  [disabled]="otherForm.invalid" ></button>
     </form>
-  </div>
+
   
